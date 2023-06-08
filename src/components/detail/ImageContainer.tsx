@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function ImageContainer() {
+export default function DetailImageContainer() {
   return (
     <ImageBox>
       <MainImageBox>

@@ -1,16 +1,14 @@
-import axios, { Axios } from 'axios';
 import { useState } from 'react';
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 import styled from 'styled-components';
 import Guest from './Guest';
-import SideCalender from './Calender';
+import DetailCalendar from './Calender';
 import {
   DatePickerProvider,
 } from '@bcad1591/react-date-picker';
-import moment from "moment";
 import 'moment/locale/ko';
 
-export default function SideBox() {
+export default function DetailSideBox() {
   const [guest, setGuest] = useState(false);
   const [guestCount, setGuestCount] = useState([0,0,0])
   const [startDate, setStartDate] = useState('날짜 추가')
@@ -126,7 +124,7 @@ export default function SideBox() {
           />
         }
         <DatePickerProvider>
-          {calendar && <SideCalender toggleCalendar={toggleCalendar} startDateChange={startDateChange} endDateChange={endDateChange} getDateGap={getDateGap}/>}
+          {calendar && <DetailCalendar toggleCalendar={toggleCalendar} startDateChange={startDateChange} endDateChange={endDateChange} getDateGap={getDateGap}/>}
         </DatePickerProvider>
       </CheckContainer>
       <BookingBtn onClick={toggleBooking}>예약 가능 여부 보기</BookingBtn>

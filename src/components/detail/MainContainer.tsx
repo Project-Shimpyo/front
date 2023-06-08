@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import SideContainer from './SideContainer';
-import SideBox from './sideBox/SideBox';
+import DetailSideBox from './sideBox/SideBox';
 import BottomContainer from './BottomContainer';
 
-export default function MainContainer() {
+export default function DetailMainContainer() {
   return (
     <>
       <Main>
         <SideContainer />
-        <SideBox />
+        <DetailSideBox />
       </Main>
       <BottomContainer />
     </>

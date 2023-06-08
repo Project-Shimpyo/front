@@ -6,8 +6,10 @@ export default function BookingContainer(){
   return(
     <Container>
       <BookingTitle>예약 요청</BookingTitle>
-      <BookingSideContainer />
-      <BookingSideBox />
+      <BookingMain>
+        <BookingSideContainer />
+        <BookingSideBox />
+      </BookingMain>
     </Container>
   )
 }
@@ -17,9 +19,16 @@ const Container = styled.div`
   max-width: 1120px;
 
 `
+
+const BookingMain = styled.div`
+  display: flex;
+  position: relative;
+
+`
+
 const BookingTitle = styled.div`
   padding-top: 64px;
-  padding-bottom: 48px;
+  padding-bottom: 32px;
   font-size: 32px;
   font-weight: 700;
 `

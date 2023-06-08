@@ -3,7 +3,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 import { BiBed } from 'react-icons/bi';
 import { BsSunset } from 'react-icons/bs';
 
-export default function SideContainer() {
+export default function DetailSideContainer() {
   return (
     <Container>
       <HotelTitle>Onda 님이 호스팅하는 펜션</HotelTitle>

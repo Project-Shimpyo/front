@@ -10,7 +10,7 @@ import {
   useDatePickReset,
 } from '@bcad1591/react-date-picker';
 
-export default function SideCalendar(props:any){
+export default function DetailCalendar(props:any){
   const { toggleCalendar, startDateChange, endDateChange, getDateGap } = props;
   const { pickedDates } = useDatePickGetter()
 

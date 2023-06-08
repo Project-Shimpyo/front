@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { AiOutlineRight } from 'react-icons/ai';
 
-export default function BottomContainer() {
+export default function DetailBottomContainer() {
   return (
     <>
       <MainTitle>★ 4.88 · 후기 112개</MainTitle>
