@@ -17,13 +17,13 @@ export default function BookingContainer(){
 const Container = styled.div`
   margin : 0 auto;
   max-width: 1120px;
-
+  height: 420px;
 `
 
 const BookingMain = styled.div`
   display: flex;
   position: relative;
-
+  justify-content: space-between;
 `
 
 const BookingTitle = styled.div`

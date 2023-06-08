@@ -9,13 +9,12 @@ export default function BookingSideContainer(){
       <BookingInfoTitle>게스트</BookingInfoTitle>
       <BookingInfoDetail>게스트 1명</BookingInfoDetail>
       <Title borderTop={true}>필수 입력 정보</Title>
-      <div>붐바야</div>
     </Container>
   )
 }
 
 const Container = styled.div`
-  width: 60%;
+  width: 50%;
 `
 
 interface ITitle {
