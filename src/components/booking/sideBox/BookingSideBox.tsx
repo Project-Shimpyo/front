@@ -45,6 +45,8 @@ const SideBox = styled.div`
   border-radius: 12px;
   width: 38%;
   position: sticky;
+  top: 140px;
+  height: 400px;
 `
 const MainImg = styled.img`
   width: 124px;

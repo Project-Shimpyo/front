@@ -1,9 +1,12 @@
 import styled from "styled-components"
 import BookingSideBox from "./sideBox/BookingSideBox"
 import BookingSideContainer from "./BookingSideContainer"
+import Footer from "../layout/Footer"
+import CommonFooter from "../shared/CommonFooter"
 
 export default function BookingContainer(){
   return(
+    <>
     <Container>
       <BookingTitle>예약 요청</BookingTitle>
       <BookingMain>
@@ -11,13 +14,16 @@ export default function BookingContainer(){
         <BookingSideBox />
       </BookingMain>
     </Container>
+    <Footer><CommonFooter /></Footer>
+    </>
   )
 }
 
 const Container = styled.div`
   margin : 0 auto;
   max-width: 1120px;
-  height: 420px;
+  position:relative;
+  
 `
 
 const BookingMain = styled.div`
