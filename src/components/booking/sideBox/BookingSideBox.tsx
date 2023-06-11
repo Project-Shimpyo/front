@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import { FiThumbsUp } from "react-icons/fi";
+import styled from 'styled-components';
+import { FiThumbsUp } from 'react-icons/fi';
 
-export default function BookingSideBox(){
-  return(
+export default function BookingSideBox() {
+  return (
     <SideBox>
       <TopContainer>
         <MainImg src="https://a0.muscache.com/im/pictures/8932fa72-8bc5-4bd4-9f27-2c65ee22c911.jpg?aki_policy=large" />
@@ -24,19 +24,21 @@ export default function BookingSideBox(){
         <div>₩236,860</div>
       </PaymentContainer>
       <PaymentContainer>
-        <div style={{textDecoration:'underline'}}>에어비앤비 서비스 수수료</div>
+        <div style={{ textDecoration: 'underline' }}>쉼표 서비스 수수료</div>
         <div>₩33,439</div>
       </PaymentContainer>
       <PaymentContainer>
-        <div style={{textDecoration:'underline'}}>세금</div>
+        <div style={{ textDecoration: 'underline' }}>세금</div>
         <div>₩28,424</div>
       </PaymentContainer>
       <TotalPriceContainer>
-        <div>총 합계 <span style={{textDecoration:'underline'}}>(KRW)</span></div>
+        <div>
+          총 합계 <span style={{ textDecoration: 'underline' }}>(KRW)</span>
+        </div>
         <div>₩298,723</div>
       </TotalPriceContainer>
     </SideBox>
-  )
+  );
 }
 
 const SideBox = styled.div`
@@ -47,34 +49,32 @@ const SideBox = styled.div`
   position: sticky;
   top: 140px;
   height: 400px;
-`
+`;
 const MainImg = styled.img`
   width: 124px;
   height: 106px;
   object-fit: cover;
   border-radius: 12px;
-`
+`;
 
-const TopContainer =styled.div`
+const TopContainer = styled.div`
   display: flex;
   padding-bottom: 24px;
-  border-bottom: 1px solid rgb(221,221,221);
-`
+  border-bottom: 1px solid rgb(221, 221, 221);
+`;
 
 const RightContainer = styled.div`
   padding-left: 12px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-`
-const TitleContainer = styled.div`
-  
-`
+`;
+const TitleContainer = styled.div``;
 
 const SmallTitle = styled.div`
   font-size: 12px;
   color: #717171;
-`
+`;
 
 const LocationTitle = styled.div`
   margin-top: 4px;
@@ -83,38 +83,38 @@ const LocationTitle = styled.div`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-`
+`;
 
 const BottomInfo = styled.div`
   font-size: 12px;
-`
+`;
 const Rank = styled.span`
   padding-left: 4px;
-`
+`;
 const Comment = styled.span`
   color: #717171;
   margin-left: 10px;
-`
+`;
 
 const PaymentDetail = styled.div`
   padding: 24px 0;
   font-size: 22px;
   font-weight: 700;
-`
+`;
 
 const PaymentContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-bottom: 16px;
-`
+`;
 
 const TotalPriceContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
   padding: 24px 0;
-  border-top: 1px solid rgb(221,221,221);
+  border-top: 1px solid rgb(221, 221, 221);
   font-size: 16px;
   font-weight: 700;
-`
+`;
