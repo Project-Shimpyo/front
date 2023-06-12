@@ -8,8 +8,8 @@ export default function BookingSideBox() {
         <MainImg src="https://a0.muscache.com/im/pictures/8932fa72-8bc5-4bd4-9f27-2c65ee22c911.jpg?aki_policy=large" />
         <RightContainer>
           <TitleContainer>
-            <SmallTitle>텐트</SmallTitle>
-            <LocationTitle>바비큐 그릴과 캠프파이어를 즐길 수 있는 밸리 뷰 텐트</LocationTitle>
+            <SmallTitle>호텔 글레드</SmallTitle>
+            <LocationTitle>트윈베드 </LocationTitle>
           </TitleContainer>
           <BottomInfo>
             <FiThumbsUp />
@@ -31,10 +31,16 @@ export default function BookingSideBox() {
         <div style={{ textDecoration: 'underline' }}>세금</div>
         <div>₩28,424</div>
       </PaymentContainer>
+      <PaymentContainer>
+        <div style={{ textDecoration: 'underline' }}>쿠폰</div>
+        <div> - ₩28,424</div>
+      </PaymentContainer>
+      <PaymentContainer>
+        <div style={{ textDecoration: 'underline' }}>등급 할인</div>
+        <div> - ₩10,000</div>
+      </PaymentContainer>
       <TotalPriceContainer>
-        <div>
-          총 합계 <span style={{ textDecoration: 'underline' }}>(KRW)</span>
-        </div>
+        <div>총 합계</div>
         <div>₩298,723</div>
       </TotalPriceContainer>
     </SideBox>
@@ -69,7 +75,9 @@ const RightContainer = styled.div`
   flex-wrap: wrap;
   align-content: space-between;
 `;
-const TitleContainer = styled.div``;
+const TitleContainer = styled.div`
+  width: 100%;
+`;
 
 const SmallTitle = styled.div`
   font-size: 12px;
