@@ -64,23 +64,7 @@
 - 회원 탈퇴
 - 회원정보 변경
 #### 예약내역 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Login" >상세보기 - WIKI 이동</a>
-- 예약내역, 이용내역, 취소내역 카테고리 화
-- 페이지 네이션
-- 이용내역에 대한 리뷰 작성
-#### 예약상세 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Login" >상세보기 - WIKI 이동</a>
-- 해당 숙소에 대한 상세 조회
-- 인원 수정, 예약 취소,
-- 이미지 슬라이드
-#### 관심 숙소 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Login" >상세보기 - WIKI 이동</a>
-- 관심 숙소 조회 및 삭제
-- 숙소 클릭시 해당 숙소의 detail페이지로 이동
-- 최대 20개 제한
-#### 메인페이지 <a href="https://github.com/Project-Shimpyo/front/wiki/Main" >상세보기 - WIKI 이동</a>
-- 검색을 통한 숙소 필터링
-- ❤ 클릭시 관심 숙소 저장
-#### 상세 페이지 <a href="https://github.com/Project-Shimpyo/front/wiki/Detail" >상세보기 - WIKI 이동</a>
-- 해당 숙소 예약
-- 해당 숙소에 대한 세부 조회
+- 예약제
 #### 숙소 관리 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Host" >상세보기 - WIKI 이동</a>
 - 등록한 숙소에 대한 수정, 삭제
 - 해당 숙소에 예약된 건수 확인
