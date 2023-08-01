@@ -75,10 +75,10 @@
 - 관심 숙소 조회 및 삭제
 - 숙소 클릭시 해당 숙소의 detail페이지로 이동
 - 최대 20개 제한
-#### 메인페이지 
+#### 메인페이지 <a href="https://github.com/Project-Shimpyo/front/wiki/Main" >상세보기 - WIKI 이동</a>
 - 검색을 통한 숙소 필터링
 - ❤ 클릭시 관심 숙소 저장
-#### 상세 페이지 
+#### 상세 페이지 <a href="https://github.com/Project-Shimpyo/front/wiki/Detail" >상세보기 - WIKI 이동</a>
 - 해당 숙소 예약
 - 해당 숙소에 대한 세부 조회
 #### 숙소 관리 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Host" >상세보기 - WIKI 이동</a>
