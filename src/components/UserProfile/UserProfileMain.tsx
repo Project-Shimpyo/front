@@ -11,6 +11,7 @@ import EditProfileModal from './Modal/EditProfileModal';
 import UserImageSection from './Main/UserImageSection';
 import { userIdAtom } from '../../recoil/userAtoms';
 import UserIntroduceSection from './Main/UserIntroduceSection';
+import { USER_SHOW_PROFILE } from '../../constants/api/userApi';
 
 interface UserProfileData {
   profileImage: string;
@@ -30,7 +31,7 @@ export default function UserProfileMain() {
   });
 
   const fetchUserProfileData = async () => {
-    await sendRequest({ url: `/api/show-profile/${userId}` });
+    await sendRequest({ url: `${USER_SHOW_PROFILE}/${userId}` });
   };
 
   useEffect(() => {

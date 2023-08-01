@@ -1,4 +1,4 @@
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import Modal from '../../shared/Modal';
 import { editprofileModalAtom } from '../../../recoil/modalAtoms';
 import styled from 'styled-components';
@@ -7,6 +7,7 @@ import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import BlackButton from '../../Account/ReUse/UI/BlackButton';
 import useAuthorizedRequest from '../../../hooks/useAuthorizedRequest';
 import Avatar from '../../shared/Avatar';
+import { nicknameAtom } from '../../../recoil/userAtoms';
 
 interface EditProfileModalProps {
   userProfileData: {
@@ -22,6 +23,8 @@ export default function EditProfileModal({ userProfileData, fetchUserProfileData
   const [introduceValue, setIntroduceValue] = useState<string>(userProfileData.selfIntroduce);
   const [fileImage, setFileImage] = useState<string>('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const nicknameValue = useRecoilValue(nicknameAtom);
+  const [sendFileData, setSendFileData] = useState<Blob>();
 
   const onChangeIntroduce = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setIntroduceValue(e.target.value);
@@ -31,6 +34,7 @@ export default function EditProfileModal({ userProfileData, fetchUserProfileData
     if (!e.target.files) return;
     const file = e.target.files[0];
 
+    setSendFileData(file);
     setFileImage(URL.createObjectURL(file));
   };
 
@@ -43,7 +47,10 @@ export default function EditProfileModal({ userProfileData, fetchUserProfileData
   const editProfileInfo = async () => {
     const formData = new FormData();
 
-    formData.append('profileImage', fileImage);
+    if (sendFileData) {
+      formData.append('profileImage', sendFileData);
+    }
+
     formData.append('selfIntroduce', new Blob([JSON.stringify(introduceValue)], { type: 'application/json' }));
 
     await sendRequest({ url: '/user/change-profile', method: 'PATCH', body: formData });
@@ -77,7 +84,7 @@ export default function EditProfileModal({ userProfileData, fetchUserProfileData
         </StyleProfileImageEditButton>
       </StyleImageContents>
       <StyleUserProfileDetailBox>
-        <h2 style={{ fontSize: '20px', fontWeight: 'bold' }}>정채운 님의 소개</h2>
+        <h2 style={{ fontSize: '20px', fontWeight: 'bold' }}>{`${nicknameValue} 님의 소개`}</h2>
         <div style={{ marginTop: '20px' }}>
           <StyleTextBox>
             <div style={{ width: '100%' }}>

@@ -8,19 +8,14 @@ import { useEffect, useState } from 'react';
 import useAuthorizedRequest from '../../../hooks/useAuthorizedRequest';
 import { useParams } from 'react-router-dom';
 
-const IconStyle = {
-  border: '1px solid rgb(200,200,200)',
-  padding: '0.5rem',
-  borderRadius: '100%',
-};
-
 interface GuestManageModalProps {
   maxPeople: number;
   minPeople: number;
   peopleCount: number;
+  getData: () => void;
 }
 
-export default function GuestManageModal({ peopleCount, minPeople, maxPeople }: GuestManageModalProps) {
+export default function GuestManageModal({ peopleCount, minPeople, maxPeople, getData }: GuestManageModalProps) {
   const [guestModalState, setGuestModalState] = useRecoilState(guestManageModalAtom);
   const [guestCount, setGuestCount] = useState(peopleCount);
   const { responseData, sendRequest } = useAuthorizedRequest({});
@@ -54,7 +49,7 @@ export default function GuestManageModal({ peopleCount, minPeople, maxPeople }: 
 
     if (responseData.isSuccess) {
       setGuestModalState(false);
-      window.location.reload();
+      getData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [responseData]);
@@ -71,10 +66,10 @@ export default function GuestManageModal({ peopleCount, minPeople, maxPeople }: 
         <div>{`인원 ${guestCount}명`}</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <StyleButton disabled={guestCount === minPeople}>
-            <AiOutlineMinus onClick={minusGuestCount} style={{ ...IconStyle }} />
+            <AiOutlineMinus onClick={minusGuestCount} />
           </StyleButton>
           <StyleButton disabled={guestCount === maxPeople}>
-            <AiOutlinePlus onClick={plustGuestCount} style={{ ...IconStyle }} />
+            <AiOutlinePlus onClick={plustGuestCount} />
           </StyleButton>
         </div>
       </StyleButtonBox>
