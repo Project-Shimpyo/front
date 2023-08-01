@@ -200,16 +200,16 @@ const PaymentInfoBox: React.FC<PaymentInfoBoxProp> = ({ houseName, checkInDate, 
     const { responseData: noneMemberTextAfterPayResponseData, sendRequest: sendNoneMemberTextAfterPayRequest } = useHttpRequest();
 
     const [mobile, setMobile] = useState(false);
-    useEffect(()=>{
+    useEffect(() => {
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if (isMobile) {
-    // mobile
-    setMobile(true);
-  } else {
-    // desktop
-    setMobile(false);
-  }
-    },[])
+        if (isMobile) {
+            // mobile
+            setMobile(true);
+        } else {
+            // desktop
+            setMobile(false);
+        }
+    }, [])
 
     //회원 결제
 
@@ -221,11 +221,11 @@ const PaymentInfoBox: React.FC<PaymentInfoBoxProp> = ({ houseName, checkInDate, 
             pg: paymentRadioSelectedValue === '신용카드' ? "html5_inicis" : "kakaopay.TC0ONETIME",
             pay_method: "card",
             merchant_uid: `${memberUid}`,
-            customer_uid: mobile ?`${noneMemberCustomerUid}`: null,
+            customer_uid: mobile ? `${noneMemberCustomerUid}` : null,
             name: `${houseName} / ${Name}`,
             amount: TotalPrice - DiscountPrice,
-            // m_redirect_url: `https://shimpyo.o-r.kr/member-mobile-order-complete/${houseId}`
-            m_redirect_url: `http://192.168.35.189:3000/member-mobile-order-complete/${houseId}?roomId=${roomId}&couponId=${couponRadioId}&payMethod=${paymentRadioSelectedValue}&peopleCount=${GuestCount}&checkInDate=${moment(checkInDate).format('YYYY.MM.DD')}&checkOutDate=${moment(checkOutDate).format('YYYY.MM.DD')}`,
+            m_redirect_url: `https://shimpyo.o-r.kr/member-mobile-order-complete/${houseId}?roomId=${roomId}&couponId=${couponRadioId}&payMethod=${paymentRadioSelectedValue}&peopleCount=${GuestCount}&checkInDate=${moment(checkInDate).format('YYYY.MM.DD')}&checkOutDate=${moment(checkOutDate).format('YYYY.MM.DD')}`
+            // m_redirect_url: `http://192.168.35.189:3000/member-mobile-order-complete/${houseId}?roomId=${roomId}&couponId=${couponRadioId}&payMethod=${paymentRadioSelectedValue}&peopleCount=${GuestCount}&checkInDate=${moment(checkInDate).format('YYYY.MM.DD')}&checkOutDate=${moment(checkOutDate).format('YYYY.MM.DD')}`,
         }
 
         async function callback(response: RequestPayResponse) {
@@ -281,14 +281,14 @@ const PaymentInfoBox: React.FC<PaymentInfoBoxProp> = ({ houseName, checkInDate, 
         const data = {
             pg: paymentRadioSelectedValue === '신용카드' ? "html5_inicis" : "kakaopay.TC0ONETIME",
             pay_method: "card",
-            merchant_uid:`${noneMemberMerchantUid}`,
-            customer_uid: mobile ?`${noneMemberCustomerUid}`: null,
+            merchant_uid: `${noneMemberMerchantUid}`,
+            customer_uid: mobile ? `${noneMemberCustomerUid}` : null,
             name: `${houseName} / ${Name}`,
             amount: TotalPrice - DiscountPrice,
             buyer_name: `${nonMemberName}`,
             buyer_tel: `${nonMemberNumber}`,
-            // m_redirect_url: `https://shimpyo.o-r.kr/none-member-mobile-order-complete/${houseId}?ROOMID=1992`,
-            m_redirect_url: `http://192.168.35.189:3000/none-member-mobile-order-complete/${houseId}?roomId=${roomId}&payMethod=${paymentRadioSelectedValue}&name=${nonMemberName}&phoneNumber=${nonMemberNumber}&peopleCount=${GuestCount}&checkInDate=${moment(checkInDate).format('YYYY.MM.DD')}&checkOutDate=${moment(checkOutDate).format('YYYY.MM.DD')}`,
+            m_redirect_url: `https://shimpyo.o-r.kr/none-member-mobile-order-complete/${houseId}?roomId=${roomId}&payMethod=${paymentRadioSelectedValue}&name=${nonMemberName}&phoneNumber=${nonMemberNumber}&peopleCount=${GuestCount}&checkInDate=${moment(checkInDate).format('YYYY.MM.DD')}&checkOutDate=${moment(checkOutDate).format('YYYY.MM.DD')}`,
+            // m_redirect_url: `http://192.168.35.189:3000/none-member-mobile-order-complete/${houseId}?roomId=${roomId}&payMethod=${paymentRadioSelectedValue}&name=${nonMemberName}&phoneNumber=${nonMemberNumber}&peopleCount=${GuestCount}&checkInDate=${moment(checkInDate).format('YYYY.MM.DD')}&checkOutDate=${moment(checkOutDate).format('YYYY.MM.DD')}`,
         }
 
         console.log("data:", data)
