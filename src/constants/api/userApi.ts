@@ -23,7 +23,6 @@ export const USER_ACCOUNT_API_PATH = '/user/account';
 export const USER_SHOW_PROFILE = '/api/show-profile';
 
 export const GOOGLE_SOCIAL_LOGOIN_PATH = '/oauth2/authorization/google';
-export const NAVER_SOCIAL_LOGOIN_PATH = '/oauth2/authorization/naver';
 export const SOCIAL_LOGIN_API_PATH = '/api/oauth2-request';
 export const SOCIAL_ADDITIONAL_INFO_API_PATH = '/api/oauth2-join';
 export const SOCIAL_SILENT_LOGIN_API_PATH = '/oauth2/oauth2-access';
