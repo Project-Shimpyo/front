@@ -9,8 +9,6 @@ import EmailInput from '../../Main/Input/EmailInput';
 import PasswordInput from '../../Main/Input/PasswordInput';
 import ConfirmPasswordInput from '../../Main/Input/ConfirmPasswordInput';
 import GoogleSocialLogin from '../../Main/SocialLogin/GoogleSocialLogin';
-import NaverLogin from '../../Main/SocialLogin/NaverLogin';
-import KakaoLogin from '../../Main/SocialLogin/KakaoLogin';
 
 export default function JoinModal() {
   const [isEmailValid, setIsEmailValid] = useState(false);
@@ -73,8 +71,6 @@ export default function JoinModal() {
 
   const footer = (
     <StyleFooter>
-      <KakaoLogin />
-      <NaverLogin />
       <GoogleSocialLogin />
       <StyleSwitchToLoginButton
         onClick={() => {

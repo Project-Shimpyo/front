@@ -10,8 +10,6 @@ import useHttpRequest from '../../../hooks/useHttpRequest';
 import Input from '../UI/Input';
 
 import { LOGIN_API_PATH, REGENERATION_REFRESH_API_PATH } from '../../../constants/api/userApi';
-import KakaoLogin from '../../Main/SocialLogin/KakaoLogin';
-import NaverLogin from '../../Main/SocialLogin/NaverLogin';
 import GoogleSocialLogin from '../../Main/SocialLogin/GoogleSocialLogin';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useLogout from '../../../hooks/useLogout';
@@ -164,8 +162,6 @@ export default function LoginModal({ isToReservationCheck, redirectPath }: Login
 
   const footer = (
     <StyleLoginFooter>
-      <KakaoLogin />
-      <NaverLogin />
       <GoogleSocialLogin />
       <StyleSwitchToJoinButton
         onClick={() => {
