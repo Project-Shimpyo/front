@@ -82,10 +82,10 @@
 - 해당 숙소 세부 조회
 - 해당 숙소 예약 가능 여부 확인
 - 해당 숙소 예약 및 결제
-#### 숙소 관리 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Host" >상세보기 - WIKI 이동</a>
+#### 숙소 관리 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Host_Manage" >상세보기 - WIKI 이동</a>
 - 등록한 숙소에 대한 수정, 삭제
 - 해당 숙소에 예약된 건수 확인
-#### 숙소 등록 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Host" >상세보기 - WIKI 이동</a>
+#### 숙소 등록 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Accommodation" >상세보기 - WIKI 이동</a>
 - 단계에 따른 숙소 등록(사진, 숙소 기본 정보, 편의 시설, 위치, 객실)
 #### 숙소 수정 페이지 - <a href="https://github.com/Project-Shimpyo/front/wiki/Host" >상세보기 - WIKI 이동</a>
 - 사진, 숙소 기본 정보, 편의 시설, 위치, 객실을 각각 수정 가능
